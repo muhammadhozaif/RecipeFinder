@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ProfileActivity">
+
+    <!-- Your existing Profile content goes here, wrapped in a LinearLayout for organization -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_above="@+id/bottom_navigation_profile">
+        <!-- The layout_above property ensures this content ends above the nav bar -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: user@example.com"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/txtPreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dietary Preference: None"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            style="@style/Widget.App.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Update Dietary Preference"
+                android:inputType="text"
+                android:textColor="@color/textColorPrimary"
+                android:padding="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSavePref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Preference"
+            style="@style/Widget.App.Button"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/white"
+    app:menu="@menu/bottom_nav_menu"
+    app:itemIconTint="@color/bottom_nav_color_selector"
+    app:itemTextColor="@color/bottom_nav_color_selector"
+    android:paddingTop="4dp"
+    android:elevation="8dp"/>
+
+</RelativeLayout>

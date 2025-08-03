@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal() // Recommended for plugin discovery
+    }
+}
+dependencyResolutionManagement {
+    // This line is crucial for resolving the "prefer settings repositories" error.
+    // PREFER_SETTINGS is generally safer than FAIL_ON_PROJECT_REPOS.
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // Add any other common repositories here if needed
+    }
+}
+
+rootProject.name = "RecipeFinder"
+include ':app'
+// Add any other modules here if you have them, e.g., include ':mylibrary'

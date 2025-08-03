@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        // These repositories are specifically for the buildscript dependencies (plugins themselves)
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle Plugin (AGP) classpath - ADJUST VERSION IF YOURS IS DIFFERENT
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        // Google Services plugin classpath - ADJUST VERSION IF YOURS IS DIFFERENT
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+// This 'plugins' block defines the plugins available for sub-projects
+// 'apply false' means they are registered here, but applied in the module's build.gradle
+plugins {
+    id 'com.android.application' version '8.2.0' apply false // ADJUST VERSION
+    id 'com.android.library' version '8.2.0' apply false // Keep if you have library modules, else remove
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false // Keep if you use Kotlin, else remove
+    id 'com.google.gms.google-services' version '4.4.2' apply false // ADJUST VERSION
+}
+
+// The 'allprojects' block with repositories is REMOVED from here
+// as repositories are now managed by settings.gradle for consistency.
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

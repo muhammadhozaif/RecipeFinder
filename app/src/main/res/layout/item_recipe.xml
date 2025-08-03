@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" app:cardCornerRadius="12dp" app:cardElevation="4dp" app:cardBackgroundColor="@color/cardBackground"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp" android:gravity="center_vertical"> <androidx.cardview.widget.CardView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:cardCornerRadius="8dp" app:cardElevation="0dp"> <ImageView
+    android:id="@+id/recipeImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:contentDescription="Recipe image" tools:src="@tools:sample/backgrounds/scenic" />
+</androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/recipeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorPrimary" android:paddingStart="16dp"
+        android:paddingEnd="16dp" tools:text="Delicious Chicken Stir-Fry with Noodles and Broccoli" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        style="@style/Widget.App.Button.Secondary" android:layout_marginTop="0dp" android:layout_marginBottom="0dp" app:backgroundTint="@color/colorAccent"
+        android:minWidth="0dp" android:minHeight="0dp" android:padding="8dp" android:textSize="14sp" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>
